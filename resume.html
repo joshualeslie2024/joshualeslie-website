@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Joshua G. Leslie</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ============================================
+       RESUME PAGE STYLES
+       ============================================ */
+
+    .resume-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 80px;
+    }
+
+    /* --- Section headings --- */
+    .resume-section {
+      margin-bottom: 52px;
+    }
+
+    .resume-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .resume-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+
+    /* --- Entry (job / cert / education) --- */
+    .entry {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+
+    .entry-header h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .entry-date {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 99px;
+      padding: 2px 10px;
+      white-space: nowrap;
+    }
+
+    .entry-org {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .entry ul {
+      padding-left: 18px;
+    }
+
+    .entry ul li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.65;
+    }
+
+    /* --- Sidebar --- */
+    .resume-sidebar {
+      position: sticky;
+      top: calc(var(--nav-height) + 24px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .sidebar-card h3 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .sidebar-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+
+    .cert-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .cert-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .cert-item span {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .download-card {
+      background: linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(129,140,248,0.1) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .download-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .download-card .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .resume-layout {
+        grid-template-columns: 1fr;
+      }
+      .resume-sidebar {
+        position: static;
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Joshua G. Leslie</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Resume</h1>
+        <p>My experience, skills, and education.</p>
+      </div>
+
+      <div class="resume-layout">
+
+        <!-- ===== Main Content ===== -->
+        <div>
+
+          <!-- Experience -->
+          <div class="resume-section">
+            <div class="resume-section-title">Experience</div>
+
+            <div class="entry">
+              <div class="entry-header">
+                <h3>IT Support Engineer</h3>
+                <span class="entry-date">2024 -Present</span>
+              </div>
+              <div class="entry-org">Think Unified <span style="color:var(--text-muted); font-weight:400;">(Merged with CCSI)</span></div>
+              <ul>
+                <li>Managed Active Directory environments for 40+ unique client companies, including user provisioning, group policy, and onboarding/offboarding workflows.</li>
+                <li>Administered Microsoft 365 security across multi-tenant environments, including Conditional Access, MFA enforcement, and Defender configurations.</li>
+                <li>Configured and maintained firewalls and VPN solutions across diverse client network architectures.</li>
+                <li>Managed disparate client infrastructure landscapes including varied hardware, software, and network environments.</li>
+                <li>Conducted patch management across client endpoints to maintain security posture and minimize vulnerability exposure.</li>
+                <li>Monitored and managed client environments using NinjaRMM for remote monitoring, alerting, and remediation.</li>
+                <li>Oversaw backup and disaster recovery solutions to ensure business continuity across client organizations.</li>
+                <li>Responded to two active cybersecurity incidents involving the Termite and Akira ransomware groups, performing containment, investigation, and recovery efforts.</li>
+              </ul>
+            </div>
+
+            <div class="entry">
+              <div class="entry-header">
+                <h3>Senior Advanced Repair Agent</h3>
+                <span class="entry-date">July 2022 -March 2024</span>
+              </div>
+              <div class="entry-org">Geek Squad</div>
+              <ul>
+                <li>Conducted in-depth diagnostic assessments of hardware and software issues, consistently achieving a high rate of issue resolution.</li>
+                <li>Collaborated with customers to provide clear explanations of technical issues and offered effective solutions in a customer-friendly manner.</li>
+                <li>Led and supervised a team of 7 agents, fostering a collaborative and positive work environment.</li>
+              </ul>
+            </div>
+
+            <div class="entry">
+              <div class="entry-header">
+                <h3>General Manager</h3>
+                <span class="entry-date">July 2017 -Dec 2021</span>
+              </div>
+              <div class="entry-org">Wendy's</div>
+              <ul>
+                <li>Led and managed a team of employees, fostering a positive and collaborative work environment.</li>
+                <li>Led a struggling store from bottom 10% in the market to a top 10% profitable store for the year of 2020.</li>
+                <li>Prioritized tasks and responsibilities to meet deadlines and achieve operational efficiency.</li>
+              </ul>
+            </div>
+
+            <div class="entry">
+              <div class="entry-header">
+                <h3>Console Repair Lead</h3>
+                <span class="entry-date">2016 -2018</span>
+              </div>
+              <div class="entry-org">GameStop Refurbishment Center</div>
+              <ul>
+                <li>Led team in repairing consoles and meeting production quotas.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="resume-section">
+            <div class="resume-section-title">Education</div>
+
+            <div class="entry">
+              <div class="entry-header">
+                <h3>Croatian Christian Academy</h3>
+              </div>
+              <div class="entry-org">GPA: 3.7</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ===== Sidebar ===== -->
+        <aside class="resume-sidebar">
+
+          <!-- Download -->
+          <div class="download-card">
+            <p>Want a copy of my full resume?</p>
+            <a href="Resume2024.pdf" class="btn btn-primary" download>&#8595; Download PDF</a>
+          </div>
+
+          <!-- Certifications -->
+          <div class="sidebar-card">
+            <h3>Certifications</h3>
+            <div class="cert-item">
+              <div class="cert-icon">&#127942;</div>
+              <span>CompTIA A+</span>
+            </div>
+            <!-- Add more certs here as you earn them -->
+          </div>
+
+          <!-- Skills -->
+          <div class="sidebar-card">
+            <h3>Skills</h3>
+            <div class="sidebar-skills">
+              <span class="tag">Hardware Repair</span>
+              <span class="tag">Windows</span>
+              <span class="tag">macOS</span>
+              <span class="tag">iOS &amp; Android</span>
+              <span class="tag">Network Troubleshooting</span>
+              <span class="tag">Email Setup</span>
+              <span class="tag">TCP/IP</span>
+              <span class="tag">DNS / DHCP</span>
+              <span class="tag">Team Leadership</span>
+              <span class="tag">Customer Support</span>
+              <span class="tag">HTML &amp; CSS</span>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Joshua G. Leslie | Built with HTML &amp; CSS</p>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Joshua G. Leslie</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ============================================
+       ABOUT PAGE STYLES
+       ============================================ */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+      align-items: start;
+      margin-bottom: 72px;
+    }
+
+    /* --- Profile card --- */
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      position: sticky;
+      top: calc(var(--nav-height) + 24px);
+    }
+
+    .profile-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .profile-card-body {
+      padding: 20px;
+    }
+
+    .profile-card-body h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .profile-card-body .title {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .profile-social a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 6px 0;
+      transition: color 0.2s;
+      border-top: 1px solid var(--border);
+    }
+
+    .profile-social a:hover { color: var(--accent); }
+
+    /* --- Bio section --- */
+    .bio h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .bio p {
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.8;
+      font-size: 0.975rem;
+    }
+
+    /* --- Learning banner --- */
+    .learning-banner {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(129, 140, 248, 0.08) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-top: 28px;
+    }
+
+    .learning-banner h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .learning-banner p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* --- Skills section --- */
+    .skills-section {
+      margin-bottom: 72px;
+    }
+
+    .skills-section-header {
+      margin-bottom: 32px;
+    }
+
+    .skills-section-header h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      transition: border-color 0.2s;
+    }
+
+    .skill-group:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .skill-group h3 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .profile-card {
+        position: static;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Joshua G. Leslie</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>About Me</h1>
+        <p>A little background on who I am and where I'm headed.</p>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Profile Card -->
+        <aside>
+          <div class="profile-card">
+            <img src="images/profile.jpg" alt="Joshua G. Leslie" />
+            <div class="profile-card-body">
+              <h2>Joshua G. Leslie</h2>
+              <div class="title">IT Technician → Cybersecurity</div>
+              <div class="profile-social">
+                <a href="https://www.linkedin.com/in/joshua-leslie-5a64512b7/" target="_blank" rel="noopener">
+                  <span>in</span> LinkedIn
+                </a>
+                <a href="mailto:Joshualeslie2024@gmail.com">
+                  <span>&#9993;</span> Email Me
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Bio -->
+        <div class="bio">
+          <h2>Hello, I'm Joshua.</h2>
+          <p>
+            I'm an IT professional currently working as an engineer at Think Unified,
+            a Managed Service Provider. In this role I manage complex, multi-client
+            environments spanning Active Directory, Microsoft 365 security, firewall
+            and VPN configurations, and endpoint management across 40+ organizations
+            using NinjaRMM.
+          </p>
+          <p>
+            I've responded to live cybersecurity incidents involving the Termite and
+            Akira ransomware groups, handling containment, investigation, and recovery.
+            That real-world exposure to active threats is what solidified my drive to
+            move deeper into cybersecurity.
+          </p>
+          <p>
+            Before IT, I spent years in management, turning around underperforming
+            teams and hitting results under pressure. That background gave me
+            communication, leadership, and problem-solving instincts that I carry
+            into everything I do in tech.
+          </p>
+
+          <div class="learning-banner">
+            <h3>&#128218; Currently Learning</h3>
+            <p>
+              Focused on cybersecurity fundamentals and currently studying for the
+              <strong style="color:var(--accent);">CompTIA Security+</strong>,
+              with a goal to complete it by May 31st. Building hands-on skills in
+              network security, threat analysis, and security operations along the way.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Skills -->
+      <div class="skills-section">
+        <div class="skills-section-header">
+          <p class="section-label" style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px;">Capabilities</p>
+          <h2>Skills &amp; Tools</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Systems Administration</h3>
+            <div class="skill-tags">
+              <span class="tag">Active Directory</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag">Windows Server</span>
+              <span class="tag">User Provisioning</span>
+              <span class="tag">Group Policy</span>
+              <span class="tag">Patch Management</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Networking</h3>
+            <div class="skill-tags">
+              <span class="tag">TCP/IP</span>
+              <span class="tag">DNS</span>
+              <span class="tag">DHCP</span>
+              <span class="tag">Firewall Configuration</span>
+              <span class="tag">VPN</span>
+              <span class="tag">Network Troubleshooting</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Security</h3>
+            <div class="skill-tags">
+              <span class="tag">MS365 Security</span>
+              <span class="tag">Incident Response</span>
+              <span class="tag">Ransomware Remediation</span>
+              <span class="tag">MFA Enforcement</span>
+              <span class="tag">Threat Analysis</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools &amp; Platforms</h3>
+            <div class="skill-tags">
+              <span class="tag">NinjaRMM</span>
+              <span class="tag">Microsoft Defender</span>
+              <span class="tag">Backup &amp; DR</span>
+              <span class="tag">Hardware Repair</span>
+              <span class="tag">iOS &amp; Android</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Leadership</h3>
+            <div class="skill-tags">
+              <span class="tag">Team Management</span>
+              <span class="tag">Customer Communication</span>
+              <span class="tag">Multi-Client Management</span>
+              <span class="tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="skills-section">
+        <div class="skills-section-header">
+          <p class="section-label" style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px;">Credentials</p>
+          <h2>Certifications</h2>
+        </div>
+        <div class="skills-grid">
+
+          <!-- CompTIA A+ -->
+          <div class="skill-group" style="display:flex; align-items:center; gap:16px;">
+            <div style="width:48px; height:48px; border-radius:12px; background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0;">&#127942;</div>
+            <div>
+              <div style="font-weight:700; font-size:0.975rem;">CompTIA A+</div>
+              <div style="font-size:0.825rem; color:var(--text-muted); margin-top:2px;">CompTIA</div>
+            </div>
+          </div>
+
+          <!-- Add more certifications here as you earn them - copy the block above -->
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Joshua G. Leslie | Built with HTML &amp; CSS</p>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
