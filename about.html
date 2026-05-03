@@ -125,6 +125,12 @@
       gap: 20px;
     }
 
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
     .skill-group {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -150,6 +156,74 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+    }
+
+    .cert-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cert-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .cert-badge-wrap {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-badge-wrap img {
+      max-width: 100%;
+      max-height: 124px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .cert-meta h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .cert-meta p {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .cert-link:hover {
+      border-color: var(--accent);
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--accent);
     }
 
     @media (max-width: 768px) {
@@ -234,12 +308,14 @@
           </p>
 
           <div class="learning-banner">
-            <h3>&#128218; Currently Learning</h3>
+            <h3>&#127942; Certification Milestone</h3>
             <p>
-              Focused on cybersecurity fundamentals and currently studying for the
-              <strong style="color:var(--accent);">CompTIA Security+</strong>,
-              with a goal to complete it by May 31st. Building hands-on skills in
-              network security, threat analysis, and security operations along the way.
+              I earned <strong style="color:var(--accent);">CompTIA Security+</strong>
+              and I am currently building on that foundation through
+              <strong style="color:var(--accent);">CompTIA Network+</strong>,
+              <strong style="color:var(--accent);">TryHackMe</strong>, and
+              <strong style="color:var(--accent);">CyberDefenders</strong> to deepen
+              my networking, detection, and hands-on defensive security skills.
             </p>
           </div>
         </div>
@@ -313,19 +389,28 @@
           <p class="section-label" style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px;">Credentials</p>
           <h2>Certifications</h2>
         </div>
-        <div class="skills-grid">
-
-          <!-- CompTIA A+ -->
-          <div class="skill-group" style="display:flex; align-items:center; gap:16px;">
-            <div style="width:48px; height:48px; border-radius:12px; background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0;">&#127942;</div>
-            <div>
-              <div style="font-weight:700; font-size:0.975rem;">CompTIA A+</div>
-              <div style="font-size:0.825rem; color:var(--text-muted); margin-top:2px;">CompTIA</div>
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div class="cert-badge-wrap">
+              <img src="Images/A+-png.png" alt="CompTIA A+ badge" />
             </div>
-          </div>
+            <div class="cert-meta">
+              <h3>CompTIA A+</h3>
+              <p>Foundational certification covering core hardware, operating systems, support, and troubleshooting skills.</p>
+              <a class="cert-link" href="https://www.credly.com/badges/657bdbce-3f42-4681-8925-d46012a87fc5" target="_blank" rel="noopener noreferrer">Verify on Credly</a>
+            </div>
+          </article>
 
-          <!-- Add more certifications here as you earn them - copy the block above -->
-
+          <article class="cert-card">
+            <div class="cert-badge-wrap">
+              <img src="Images/Security+-png.png" alt="CompTIA Security+ badge" />
+            </div>
+            <div class="cert-meta">
+              <h3>CompTIA Security+</h3>
+              <p>Cybersecurity certification validating knowledge in risk management, network defense, incident response, and security operations.</p>
+              <a class="cert-link" href="https://www.credly.com/badges/5701067d-7e8d-4127-8303-51f2b04e77c2" target="_blank" rel="noopener noreferrer">Verify on Credly</a>
+            </div>
+          </article>
         </div>
       </div>
 

@@ -158,6 +158,67 @@
       color: var(--text);
     }
 
+    .cert-item a {
+      color: var(--text);
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .cert-item a:hover {
+      color: var(--accent);
+    }
+
+    .cert-proof {
+      display: block;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      margin-top: 2px;
+    }
+
+    .cert-proof:hover {
+      color: var(--accent);
+    }
+
+    .cert-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .cert-badge-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .cert-badge-card img {
+      width: 100%;
+      max-width: 180px;
+      margin: 0 auto 16px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .cert-badge-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .cert-badge-card p {
+      color: var(--text-muted);
+      font-size: 0.86rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .cert-badge-card a {
+      color: var(--accent);
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
     .download-card {
       background: linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(129,140,248,0.1) 100%);
       border: 1px solid rgba(56, 189, 248, 0.25);
@@ -293,6 +354,27 @@
             </div>
           </div>
 
+          <!-- Certifications -->
+          <div class="resume-section">
+            <div class="resume-section-title">Certifications</div>
+
+            <div class="cert-gallery">
+              <article class="cert-badge-card">
+                <img src="Images/A+-png.png" alt="CompTIA A+ badge" />
+                <h3>CompTIA A+</h3>
+                <p>Core IT support certification covering troubleshooting, systems, devices, and operational best practices.</p>
+                <a href="https://www.credly.com/badges/657bdbce-3f42-4681-8925-d46012a87fc5" target="_blank" rel="noopener noreferrer">Verify on Credly</a>
+              </article>
+
+              <article class="cert-badge-card">
+                <img src="Images/Security+-png.png" alt="CompTIA Security+ badge" />
+                <h3>CompTIA Security+</h3>
+                <p>Cybersecurity certification focused on security operations, risk management, incident response, and defensive controls.</p>
+                <a href="https://www.credly.com/badges/5701067d-7e8d-4127-8303-51f2b04e77c2" target="_blank" rel="noopener noreferrer">Verify on Credly</a>
+              </article>
+            </div>
+          </div>
+
         </div>
 
         <!-- ===== Sidebar ===== -->
@@ -309,9 +391,18 @@
             <h3>Certifications</h3>
             <div class="cert-item">
               <div class="cert-icon">&#127942;</div>
-              <span>CompTIA A+</span>
+              <div>
+                <a href="https://www.credly.com/badges/657bdbce-3f42-4681-8925-d46012a87fc5" target="_blank" rel="noopener noreferrer">CompTIA A+</a>
+                <a class="cert-proof" href="https://www.credly.com/badges/657bdbce-3f42-4681-8925-d46012a87fc5" target="_blank" rel="noopener noreferrer">Credly verification</a>
+              </div>
             </div>
-            <!-- Add more certs here as you earn them -->
+            <div class="cert-item">
+              <div class="cert-icon">&#128737;</div>
+              <div>
+                <a href="https://www.credly.com/badges/5701067d-7e8d-4127-8303-51f2b04e77c2" target="_blank" rel="noopener noreferrer">CompTIA Security+</a>
+                <a class="cert-proof" href="https://www.credly.com/badges/5701067d-7e8d-4127-8303-51f2b04e77c2" target="_blank" rel="noopener noreferrer">Credly verification</a>
+              </div>
+            </div>
           </div>
 
           <!-- Skills -->
